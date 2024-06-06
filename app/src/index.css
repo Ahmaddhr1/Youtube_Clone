@@ -7,15 +7,30 @@ body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   overflow-y: hidden;
+   overflow-x: hidden;
    list-style: none;
    @apply bg-my-black text-white
+}
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+   @apply md:w-[12px] md:h-[12px]/* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply md:bg-my-gray md:rounded-lg
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply md:bg-[#555]/* Color when hovering */
+}
+
+::-webkit-scrollbar-track {
+@apply md:bg-[#f1f1f1] md:rounded-lg
 }
 
 .padding {
   @apply md:pt-4 md:pb-4 md:pr-10 md:pl-10 pr-5 pl-5
 }
 .h-cover {
-  @apply min-h-[calc(100vh-80px)]  md:pb-4 md:pr-10 md:pl-10 pr-5 pl-5 pt-[90px]
+  @apply  md:pb-4 md:pr-10 md:pl-10 pr-5 pl-5 pt-[90px]
 }
 

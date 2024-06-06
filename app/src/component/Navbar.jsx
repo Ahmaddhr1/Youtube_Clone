@@ -9,7 +9,7 @@ const Navbar = () => {
     setIsSearchOpen(false);
   };
   return (
-    <nav className="flex items-center justify-between w-full fixed bg-my-black h-[70px] padding border-b border-my-gray ">
+    <nav className="flex items-center justify-between w-full fixed bg-my-black h-[70px] padding border-b border-my-gray z-[100]">
       <div className="flex items-center justify-center gap-3">
         <img src={Logo} alt="Logo" className="md:w-[30px] w-[25px]" />
         <h1 className=" md:text-xl text-lg font-semibold">Youtube | Ahmad</h1>
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div
         className={`${
           isSearchOpen
-            ? "w-full bg-my-black border-b border-my-gray  absolute top-full pr-5 pl-5 pt-2 pb-4 mt-2 left-0"
+            ? "w-full bg-my-black border-b border-my-gray  absolute top-full pr-5 pl-5 pt-2 pb-4  left-0 "
             : "hidden"
         }`}
       >
