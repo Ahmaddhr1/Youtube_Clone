@@ -1,3 +1,21 @@
+@import "@flaticon/flaticon-uicons/css/all/all";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-y: hidden;
+   list-style: none;
+   @apply bg-my-black text-white
+}
+
+.padding {
+  @apply md:pt-4 md:pb-4 md:pr-10 md:pl-10 pr-5 pl-5
+}
+.h-cover {
+  @apply min-h-[calc(100vh-80px)]  md:pb-4 md:pr-10 md:pl-10 pr-5 pl-5 pt-[90px]
+}
+
