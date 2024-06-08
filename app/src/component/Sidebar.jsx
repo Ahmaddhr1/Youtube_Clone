@@ -8,7 +8,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
       {categories.map((category) => (
         <Link
           onClick={() => setSelectedCategory(category.name)}
-          className={`flex items-start gap-4 justify-left md:px-4 md:py-2 px-2 py-1 bg-my-gray  md:bg-transparent md:hover:bg-my-gray rounded-lg duration-300 ${
+          className={`flex md:items-start items-center w-fit md:w-full gap-4 justify-left md:px-4 md:py-2 px-2 py-1 bg-my-gray  md:bg-transparent md:hover:bg-my-gray rounded-lg duration-300 ${
             category.name === selectedCategory
               ? "bg-gradient-to-br from-orange-500 via-pink-700 to-blue-400"
               : "bg-transparent"

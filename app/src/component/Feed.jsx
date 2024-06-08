@@ -5,17 +5,22 @@ import { useEffect, useState } from "react";
 import Videos from "./Videos";
 import PulseLoader from "react-spinners/PulseLoader";
 
+
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
-  const [isLoading ,setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
-      setIsLoading(false)
-    });
+      setIsLoading(false);
+    }).catch((err) => { 
+      alert("Error fetching " +err.message);
+      setIsLoading(false);
+    })
   }, [selectedCategory]);
+  
   return (
     <div className="md:h-cover mt-0 flex flex-col pt-20 p-4">
       <Sidebar
@@ -35,8 +40,13 @@ const Feed = () => {
             Videos
           </span>
         </h1>
-        {isLoading? <div className="flex-1 flex items-center justify-center text-2xl h-[100%] mt-[100px]"><PulseLoader color="white" /></div>:  <Videos videos={videos} />}
-       
+        {isLoading ? (
+          <div className="flex-1 flex items-center justify-center text-2xl h-[100%] mt-[100px]">
+            <PulseLoader color="white" />
+          </div>
+        ) : (
+          <Videos videos={videos} />
+        )}
       </div>
     </div>
   );
