@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../imgs/logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const viewSearch = () => {
@@ -10,10 +11,10 @@ const Navbar = () => {
   };
   return (
     <nav className="flex items-center justify-between w-full fixed bg-my-black h-[70px] padding border-b border-my-gray z-[100]">
-      <div className="flex items-center justify-center gap-3">
+      <Link to="/" className="flex items-center justify-center gap-3">
         <img src={Logo} alt="Logo" className="md:w-[30px] w-[25px]" />
         <h1 className=" md:text-xl text-lg font-semibold">Youtube | Ahmad</h1>
-      </div>
+      </Link>
       <form className="md:flex hidden gap-3 bg-my-gray pt-3 pb-3 pl-5 pr-2 rounded-lg w-[300px]">
         <i className="fi fi-rr-search"></i>
         <input

@@ -11,9 +11,9 @@ const Videos = ({ videos }) => {
   }, [videos]);
   return (
     <section>
-      {channels.length >0 && <p className="text-slate-400 text-xl font-semibold mb-3">Channels:</p>}
+      {channels.length >0 && <p className="text-slate-400 text-xl font-semibold">Channels:</p>}
       {channels.length > 0 && (
-        <div className="w-full flex items-center overflow-x-scroll h-[140px] ">
+        <div className="w-full flex items-center overflow-x-scroll h-[180px] mb-1">
           {channels.map(
             (item ,index) => item.id.channelId && <ChannelCard channel={item} key={index}/>
           )}

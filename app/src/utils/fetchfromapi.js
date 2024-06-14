@@ -17,11 +17,4 @@ export const fetchFromAPI =async(url) => {
     return response.data
 }
 
-export const fetchVdDetails =async(url) => {
-  const response = await axios.get(`${BASE_URL}${url}`,options)
-  return response.data
-}
-export const fetchChannelDetails =async(url) => {
-  const response = await axios.get(`${BASE_URL}${url}`,options)
-  return response.data
-}
+
