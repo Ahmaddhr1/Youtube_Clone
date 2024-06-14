@@ -4,7 +4,7 @@ import { fetchFromAPI } from "../utils/fetchfromapi";
 import { useEffect, useState } from "react";
 import Videos from "./Videos";
 import PulseLoader from "react-spinners/PulseLoader";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -16,7 +16,7 @@ const Feed = () => {
       setVideos(data.items);
       setIsLoading(false);
     }).catch((err) => { 
-      alert("Error fetching " +err.message);
+      toast.error('Error fetching videos,Try again later. Maybe the limit reaching this API was reached')
       setIsLoading(false);
     })
   }, [selectedCategory]);
@@ -27,7 +27,7 @@ const Feed = () => {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <div className="flex-1  bg-transparent outline-none md:ml-[200px] mt-[70px] md:mt-0 min-h-[100vh]">
+      <div className="flex-1  bg-transparent outline-none md:ml-[230px] mt-[70px] md:mt-0 min-h-[100vh]">
         <h1 className="text-2xl font-semibold mb-3">
           {selectedCategory}{" "}
           <span
@@ -47,7 +47,9 @@ const Feed = () => {
         ) : (
           <Videos videos={videos} />
         )}
+      
       </div>
+    
     </div>
   );
 };

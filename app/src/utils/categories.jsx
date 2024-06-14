@@ -1,6 +1,5 @@
 export const categories = [
     { name: 'New', icon: <i className="fi fi-rr-house-blank"></i> },
-    { name: 'MrBeast', icon: <i className="fi fi-rr-square-code"></i> },
     { name: '@user_me', icon: <i className="fi fi-rr-music-alt"></i>},
     { name: 'Education', icon: <i className="fi fi-rr-graduation-cap"></i> },
     { name: 'Podcast', icon: <i className="fi fi-rr-circle-microphone"></i> },
