@@ -9,7 +9,7 @@ API link: https://rapidapi.com/ytdlfree/api/youtube-v31/playground/apiendpoint_5
 - Display videos by category
 - Search for videos
 - View channel details
-- Watch video details
+- Watch video and its details with a suggestion to videos with the same concept
 
 ## Tech Stack
 - ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
