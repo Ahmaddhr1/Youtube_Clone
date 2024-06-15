@@ -4,7 +4,7 @@ import { categories } from "../utils/categories.jsx";
 import { Link } from "react-router-dom";
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
-    <div className="flex md:flex-col gap-2 md:w-fit pr-4 border-r py-3 md:py-0 mt-[-10px] md:mt-0 border-my-gray fixed z-[99] bg-my-black overflow-x-scroll md:overflow-x-hidden w-full md:h-[100%] ">
+    <div className="flex md:flex-col gap-2 md:w-fit pr-4 border-r py-3 md:py-0 mt-[-10px] md:mt-0 border-my-gray fixed z-[98] bg-my-black overflow-x-scroll md:overflow-x-hidden w-full md:h-[100%] ">
       {categories.map((category) => (
   
           <Link

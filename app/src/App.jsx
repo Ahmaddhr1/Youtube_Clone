@@ -6,6 +6,7 @@ import {
   SearchFeed,
   Navbar,
 } from "./component";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Route path="/search/:search" element={<SearchFeed />} />
         <Route path="/video/:id" element={<VideoDetail />} />
         <Route path="/channel/:id" element={<ChannelDetail />} />
+
       </Routes>
+      <Footer />
 
     </>
   );
